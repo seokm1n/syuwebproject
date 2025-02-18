@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page errorPage = "error/p144.jsp" %>
+<%@ page errorPage = "/error/p144.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
