@@ -15,7 +15,7 @@
 name 쿠키 = <%= cookies.getValue("name") %> <br>
 <% if (cookies.exists("id")) { %>
 id 쿠키 = <%= cookies.getValue("id") %> <br>
-<% | %>
+<% } %>
 
 </body>
 </html>
