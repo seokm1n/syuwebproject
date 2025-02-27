@@ -85,6 +85,16 @@
 	</filter-mapping>
 	
 	
+	<filter>
+		<filter-name>LoginCheck</filter-name>
+		<filter-class>filter.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginCheck</filter-name>
+		<url-pattern>/chap19/board/*</url-pattern>
+	</filter-mapping>
+	
+	
 	<!-- 
 	<context-param>
 		<description>로깅 여부</description>
