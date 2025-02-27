@@ -6,6 +6,7 @@
 		http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
 	
+	
 	<servlet>
 		<servlet-name>DBCPInit2</servlet-name>
 		<servlet-class>jdbc.DBCPInit2</servlet-class>
@@ -40,6 +41,7 @@
 		<url-pattern>/simple</url-pattern>
 	</servlet-mapping>
 	
+	
 	<servlet>
 		<servlet-name>ControllerUsingFile</servlet-name>
 		<servlet-class>mvc.controller.ControllerUsingFile</servlet-class>
@@ -53,6 +55,35 @@
 		<servlet-name>ControllerUsingFile</servlet-name>
 		<url-pattern>/controllerUsingFile</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ControllerUsingURI</servlet-name>
+		<servlet-class>mvc.controller.ControllerUsingURI</servlet-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<param-value>/WEB-INF/commandHandlerURI.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ControllerUsingURI</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<filter>
+		<filter-name>NullParameter</filter-name>
+		<filter-class>filter.NullParameterFilter</filter-class>
+		<init-param>
+			<param-name>parameterNames</param-name>
+			<param-value>id,name</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>NullParameter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	
 	
 	<!-- 
 	<context-param>
