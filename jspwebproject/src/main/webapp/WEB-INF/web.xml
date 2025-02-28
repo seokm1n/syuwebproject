@@ -12,15 +12,15 @@
 		<servlet-class>jdbc.DBCPInit2</servlet-class>
 		<init-param>
 			<param-name>jdbcdriver</param-name>
-			<param-value>com.mysql.jdbc.Driver</param-value>
+			<param-value>oracle.jdbc.driver.OracleDriver</param-value>
 		</init-param>
 		<init-param>
 			<param-name>jdbcUrl</param-name>
-			<param-value>jdbc:mysql://localhost:3306/chap14?characterEncoding=utf8</param-value>
+			<param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
 		</init-param>
 		<init-param>
 			<param-name>dbUser</param-name>
-			<param-value>jspexam</param-value>
+			<param-value>c##jspexam</param-value>
 		</init-param>
 		<init-param>
 			<param-name>dbPass</param-name>
